@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feature
+      id="SOSearcherFeature"
+      label="SOSearcherFeature"
+      version="1.0.0.qualifier">
+
+   <description url="https://github.com/antonsarov/codepot-ide-workshop">
+      Plugin which enables searching for posts on Stack Overflow. See https://github.com/antonsarov/codepot-ide-workshop for more information and variants of this plugin for IntelliJ and NetBeans
+   </description>
+
+   <copyright url="http://www.example.com/copyright">
+      [Enter Copyright Description here.]
+   </copyright>
+
+   <license url="http://www.example.com/license">
+      [Enter License Description here.]
+   </license>
+
+   <plugin
+         id="com.antonsarov.codepot.sosearcher"
+         download-size="0"
+         install-size="0"
+         version="0.0.0"
+         unpack="false"/>
+
+</feature>

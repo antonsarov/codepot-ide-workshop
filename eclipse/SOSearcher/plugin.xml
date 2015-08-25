@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            allPopups="false"
+            locationURI="menu:window?after=additions">
+         <command
+               commandId="com.antonsarov.codepot.sosearcher.commands.search"
+               icon="icons/so16.png"
+               label="Search on Stack Overflow"
+               style="push">
+         </command>
+      </menuContribution>
+   </extension>
+   <extension
+         point="org.eclipse.ui.commands">
+      <command
+            defaultHandler="com.antonsarov.codepot.sosearcher.handlers.SearchHandler"
+            id="com.antonsarov.codepot.sosearcher.commands.search"
+            name="Search on Stack Overflow">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.antonsarov.codepot.sosearcher.commands.search"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M3+M2+S">
+      </key>
+   </extension>
+
+</plugin>
