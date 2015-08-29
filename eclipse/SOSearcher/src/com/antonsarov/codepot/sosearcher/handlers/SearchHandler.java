@@ -1,6 +1,6 @@
 package com.antonsarov.codepot.sosearcher.handlers;
-import java.net.MalformedURLException;
 import java.net.URL;
+import java.net.URLEncoder;
 
 import org.eclipse.core.commands.AbstractHandler;
 import org.eclipse.core.commands.ExecutionEvent;
@@ -35,11 +35,11 @@ public class SearchHandler extends AbstractHandler {
 					"Not really sure what you want, huh?", null);
 			log.log(status);
 		} else {
-			final String url = SO_SEARCH_URL + input;
 			try {
+				final String url = SO_SEARCH_URL + URLEncoder(input, "UTF-8");
 				PlatformUI.getWorkbench().getBrowserSupport()
 						.getExternalBrowser().openURL(new URL(url));
-			} catch (PartInitException | MalformedURLException e) {
+			} catch (Exception e) {
 				e.printStackTrace();
 			}
 		}
